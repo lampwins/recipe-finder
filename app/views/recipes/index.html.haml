@@ -1,14 +1,18 @@
 -#  This file is app/views/recipes/index.html.haml
 %h1 Search Recipes
-= form_tag search_path, :method => :get do
-%table#ingredients_form
-  %tbody
-    %tr
-      %td= Ingredient
-      %td= %input{:type=>"text" :name=>"ingredient_1"}
+%form{:action => "search_path", :method => "post"}
+  %table#ingredients_form
     %tr
       %td
-      %td= %button{:value=>"Add another"}
+        Ingredient
+      %td
+        %input#ingredient_1{:name => "ingredient_1", :type => "text"}
     %tr
       %td
-      %td= %input{:type=>"submit" :name=>"submit" :value=>"Submit"}
+      %td
+        %button
+          Add another
+    %tr
+      %td
+      %td
+        %input{:type => "submit", :value => "Submit"}
