@@ -1,0 +1,36 @@
+-#  This file is app/views/recipes/new.html.haml
+%h1 Submit New Recipes
+=form_tag recipes_path do
+  %table#ingredients_form
+    %tr
+      %td
+        Title
+      %td
+        %input#title{:name => "title", :type => "text", :required => "true"}
+    %tr
+      %td
+        Cook Time (hours)
+      %td
+        %input#cook_time{:name => "cook_time", :type => "number", :required => "true"}
+    %tr
+      %td
+        Directions
+      %td
+        %textarea#directions{:name => "directions", :required => "true"}
+          :preserve
+    %tr
+      %td
+        Main Ingredient
+      %td
+        %select#main_ingredient{:name => "main_ingredient", :required => "true"}
+          %option{:value => "select"} Select
+    %tr
+      %td
+        Side Ingredient
+      %td
+        %select#side_ingredient{:name => "side_ingredient", :required => "true"}
+          %option{:value => "select"} Select
+    %tr
+      %td
+      %td
+        %input{:type => "submit", :value => "Submit"}
