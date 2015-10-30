@@ -1,6 +1,9 @@
 class RecipesController < ApplicationController
   
   def index
+    @main_ingredients = Recipe.allMainIngredients
+    @side_ingredients = Recipe.allSideIngredients
+    
   end
   
   def create
@@ -21,5 +24,9 @@ class RecipesController < ApplicationController
     @main_ingredients = Recipe.allMainIngredients
     @side_ingredients = Recipe.allSideIngredients
     
+  end
+  
+  def show
+  
   end
 end

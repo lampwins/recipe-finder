@@ -1,20 +1,21 @@
 -#  This file is app/views/recipes/index.html.haml
 %h1 Search Recipes
-%form{:action => "search_path", :method => "post"}
+=form_tag recipe_path do
   %table#ingredients_form
     %tr
       %td
-        Ingredient
-      %td 
-        %select("post", "main_ingredient", Recipe.all.collect {|r| [r.title, r.main_ingredient]}, {include_blank: 'None'}) 
+        Main Ingredient
       %td
-        %select{:id => "side"}
-        
+        %select#main_ingredient{:name => "main_ingredient", :required => "true"}
+          %option{:value => "select"} Select
+          =options_for_select(@main_ingredients)
     %tr
       %td
+        Side Ingredient
       %td
-        %button{:id => "add"}
-          Add another
+        %select#side_ingredient{:name => "side_ingredient", :required => "true"}
+          %option{:value => "select"} Select
+          =options_for_select(@side_ingredients)
     %tr
       %td
       %td
