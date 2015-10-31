@@ -27,6 +27,7 @@ class RecipesController < ApplicationController
   end
   
   def show
-  
+    @recipe = Recipe.find_by main_ingredient: params[:main_ingredient], side_ingredient: params[:side_ingredient]
+    
   end
 end

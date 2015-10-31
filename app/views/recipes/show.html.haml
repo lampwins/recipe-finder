@@ -3,19 +3,20 @@
     %tr
         %td
             Title
-        %td
-            
+        %td= @recipe.title
     %tr
         %td
             Cook Time
-        %td
-        
+        %td= @recipe.cook_time
     %tr
         %td
             Main Ingredient
-        %td
-    
+        %td= @recipe.main_ingredient
     %tr
         %td
             Side Ingredient
+        %td= @recipe.side_ingredient
+    %tr
         %td
+            Directions
+        %td= @recipe.directions
