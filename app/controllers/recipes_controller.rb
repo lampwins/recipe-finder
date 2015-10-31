@@ -15,7 +15,7 @@ class RecipesController < ApplicationController
     recipe.side_ingredient = params[:side_ingredient]
     recipe.save!
   
-    flash[:notice] = "Successfuly added " + recipe.title
+    flash[:notice] = "Successfully added " + recipe.title
     redirect_to :root
     
   end
