@@ -1,6 +1,6 @@
 -#  This file is app/views/recipes/index.html.haml
 %h1 Search Recipes
-=form_tag recipe_path do
+=form_tag recipe_path, :method => :get do
   %table#ingredients_form
     %tr
       %td
