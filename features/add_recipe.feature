@@ -7,16 +7,15 @@ Feature: add a new recipe
 Scenario: search for recipes containing chicken
   
   Given I am on the recipe-finder home page
-  When I press "add" 
+  When I follow "Add Recipe" 
   Then I should be on the add new recipe page
-  When I enter "Chicken and Rice" into "Recipe Name"
-  And I enter 2 into "Cook Time"
-  And I enter "Tastes duck" into "Description"
-  And I enter "Chicken" into "Protein"
-  And I enter "Rice" into "Side"
-  And I enter "Make your apprentice do it" into "Instructions"
-  And I press "submit"
+  When I fill in "title" with "Chicken and Rice"
+  And I fill in "cook_time" with "2"
+  And I fill in "directions" with "Make your apprentice do it"
+  And I fill in "main_ingredient" with "Chicken"
+  And I fill in "side_ingredient" with "Rice"
+  And I press "Submit"
   Then I should be on the recipe-finder home page
-  And I should see "Thank You for your submission!"
+  And I should see "Successfully added Chicken and Rice"
   
   

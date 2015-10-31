@@ -22,16 +22,12 @@
       %td
         Main Ingredient
       %td
-        %select#main_ingredient{:name => "main_ingredient", :required => "true"}
-          %option{:value => "select"} Select
-          =options_for_select(@main_ingredients)
+        %input#main_ingredient{:name => "main_ingredient", :type => "text", :required => "true"}
     %tr
       %td
         Side Ingredient
       %td
-        %select#side_ingredient{:name => "side_ingredient", :required => "true"}
-          %option{:value => "select"} Select
-          =options_for_select(@side_ingredients)
+        %input#side_ingredient{:name => "side_ingredient", :type => "text", :required => "true"}
     %tr
       %td
       %td
