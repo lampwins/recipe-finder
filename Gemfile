@@ -37,6 +37,10 @@ group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
   
+  # Capybara & components - Phil
+  gem 'database_cleaner'
+  gem 'capybara'
+  
   gem 'rspec-rails'
   gem 'autotest'
 end
@@ -47,6 +51,10 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  
+  # Cucumber goodies - Phil
+  gem 'cucumber-rails' 
+  gem 'cucumber-rails-training-wheels'
 end
 
 group :production do
