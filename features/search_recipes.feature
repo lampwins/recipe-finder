@@ -15,8 +15,8 @@ Background: recipes have been added to database
 
 Scenario: search for recipes containing chicken
   
-  When I enter "Chicken" into "protein"
-  When I enter "Rice" into "side"
+  When I fill in "main_ingredient" with "Chicken"
+  When I fill in "side_ingredient" with "Rice"
   And I press "Submit"
   Then I should be on the recipe page
   And I should see "Chicken"
