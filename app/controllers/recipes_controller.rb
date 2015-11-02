@@ -7,27 +7,38 @@ class RecipesController < ApplicationController
   end
   
   def create
-    recipe = Recipe.new()
-    recipe.title = params[:title]
-    recipe.cook_time = params[:cook_time]
-    recipe.directions = params[:directions]
-    recipe.main_ingredient = params[:main_ingredient]
-    recipe.side_ingredient = params[:side_ingredient]
-    recipe.save!
-  
-    flash[:notice] = "Successfully added " + recipe.title
-    redirect_to :root
-    
+    if params[:title] == "" || params[:cook_time] == "" || params[:directions] == "" || params[:main_ingredient] == "" || params[:side_ingredient] == ""
+      flash[:notice] = "YOU MUST SPECIFY ALL RECIPE CRITERIA"
+      redirect_to :root
+    else
+      recipe = Recipe.new()
+      recipe.title = params[:title]
+      recipe.cook_time = params[:cook_time]
+      recipe.directions = params[:directions]
+      recipe.main_ingredient = params[:main_ingredient]
+      recipe.side_ingredient = params[:side_ingredient]
+      recipe.save!
+      flash[:notice] = "Successfully added " + recipe.title
+      redirect_to :root
+    end
   end
   
   def new
-    @main_ingredients = Recipe.allMainIngredients
-    @side_ingredients = Recipe.allSideIngredients
     
   end
   
   def show
-    @recipe = Recipe.find_by main_ingredient: params[:main_ingredient], side_ingredient: params[:side_ingredient]
+    if params[:main_ingredient] == "select" || params[:side_ingredient] == "select"
+      flash[:notice] = "YOU MUST SPECIFY BOTH INGREDIENTS"
+      redirect_to(:root)
+      return
+    end
     
+    @recipe = Recipe.find_by main_ingredient: params[:main_ingredient], side_ingredient: params[:side_ingredient]
+    if @recipe.nil?
+      flash[:notice] = "There is no recipe with these ingredients"
+      redirect_to(:root)
+      return
+    end
   end
 end
