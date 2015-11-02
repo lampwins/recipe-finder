@@ -48,3 +48,11 @@ Scenario: search for ingredients that are not found in a recipe
   And I press "Submit"
   Then I should be on the recipe-finder home page
   And I should see "There is no recipe with these ingredients"
+  
+Scenario: go back to seach again
+  When I select "Chicken" from "main_ingredient"
+  When I select "Rice" from "side_ingredient"
+  And I press "Submit"
+  Then I should be on the recipe page
+  And I follow "Back"
+  Then I should be on the recipe-finder home page
