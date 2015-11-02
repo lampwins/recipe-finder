@@ -9,13 +9,13 @@ Scenario: search for recipes containing chicken
   Given I am on the recipe-finder home page
   When I follow "Add Recipe" 
   Then I should be on the add new recipe page
-  When I fill in "title" with "Chicken and Rice"
-  And I fill in "cook_time" with "2"
+  When I fill in "title" with "Pork Fried Rice"
+  And I fill in "cook_time" with "30"
   And I fill in "directions" with "Make your apprentice do it"
-  And I fill in "main_ingredient" with "Chicken"
+  And I fill in "main_ingredient" with "Pork"
   And I fill in "side_ingredient" with "Rice"
   And I press "Submit"
   Then I should be on the recipe-finder home page
-  And I should see "Successfully added Chicken and Rice"
+  And I should see "Successfully added Pork Fried Rice"
   
   
