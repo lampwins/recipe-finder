@@ -34,11 +34,37 @@ class RecipesController < ApplicationController
       return
     end
     
-    @recipe = Recipe.find_by main_ingredient: params[:main_ingredient], side_ingredient: params[:side_ingredient]
+    @recipes_to_exclude = []
+    
+    if flash[:recipes_to_exclude] == nil
+      @recipe = Recipe.find_by main_ingredient: params[:main_ingredient], side_ingredient: params[:side_ingredient]
+    else
+      @recipes_to_exclude = flash[:recipes_to_exclude]
+      foundRecipe = false
+      checkRecipe = Recipe.new()
+      checkRecipe = Recipe.find_by main_ingredient: params[:main_ingredient], side_ingredient: params[:side_ingredient]
+      @recipes_to_exclude.each do |r|
+        if r == checkRecipe.title
+          foundRecipe = true
+        end
+      end
+      if foundRecipe
+        @recipe = Recipe.nextRecipe(params[:main_ingredient], params[:side_ingredient], :recipes_to_exclude => @recipes_to_exclude.join(','))
+      else
+        @recipe = Recipe.find_by main_ingredient: params[:main_ingredient], side_ingredient: params[:side_ingredient]
+      end
+    end
     if @recipe.nil?
       flash[:notice] = "There is no recipe with these ingredients"
       redirect_to(:root)
       return
+    elsif @recipe.title.nil?
+      flash[:notice] = "There are no more recipes with these ingredients"
+      redirect_to(:root)
+      return
+    else
+      @recipes_to_exclude.push(@recipe.title)
+      flash[:recipes_to_exclude] = @recipes_to_exclude
     end
   end
 end

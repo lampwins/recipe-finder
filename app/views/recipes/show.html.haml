@@ -2,23 +2,25 @@
 %table
     %tr
         %td
+        %td= "Exclude: #{@recipes_to_exclude}"
+    %tr
+        %td
             Title
-        %td= @recipe.title
-    %tr
-        %td
-            Cook Time
-        %td= @recipe.cook_time
-    %tr
-        %td
-            Main Ingredient
-        %td= @recipe.main_ingredient
-    %tr
-        %td
-            Side Ingredient
-        %td= @recipe.side_ingredient
-    %tr
-        %td
-            Directions
-        %td= @recipe.directions
 
-= link_to 'Back', :root
+%br
+%br
+%table
+    %tr
+        %td{:colspan => 2}
+            Like this recipe?
+    %tr
+        %td
+            -# Dummy button to be replaced
+            %input{:type=>"button", :value => "Yes"}
+        %td
+            =form_tag recipe_path, :method => :get do
+                %input{:type=>"hidden", :value=>params[:main_ingredient], :name=>:main_ingredient}
+                %input{:type=>"hidden", :value=>params[:side_ingredient], :name=>:side_ingredient}
+                %input{:type=>"submit", :value => "No Find Another"}
+        %td
+            = button_to 'Back', :root, :method => :get

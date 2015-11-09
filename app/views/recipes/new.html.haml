@@ -32,3 +32,8 @@
       %td
       %td
         %input{:type => "submit", :value => "Submit"}
+%table
+  %tr
+    %td
+      =form_tag :root, :method => :get do
+        %input{:type=>"submit", :value => "Back"}
