@@ -13,12 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20151029025831) do
 
-  create_table "ingredients", force: :cascade do |t|
-    t.string  "common_name"
-    t.string  "name"
-    t.integer "recipe"
-  end
-
   create_table "recipes", force: :cascade do |t|
     t.string   "title"
     t.integer  "cook_time"
