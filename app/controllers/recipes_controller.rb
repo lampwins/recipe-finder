@@ -34,11 +34,26 @@ class RecipesController < ApplicationController
       return
     end
     
-    @recipe = Recipe.find_by main_ingredient: params[:main_ingredient], side_ingredient: params[:side_ingredient]
-    if @recipe.nil?
+    if params.has_key?(:ids)
+      @ids = params[:ids].split(",")
+      @recipe = Recipe.where("id NOT IN (?)", @ids)
+    else
+      @ids = []
+      @recipe = Recipe
+    end
+    
+    @recipe = @recipe.find_by main_ingredient: params[:main_ingredient], side_ingredient: params[:side_ingredient]
+    if @recipe.nil? and !@ids.empty?
+      flash[:notice] = "There are no more recipes for these ingredients"
+      redirect_to(:root)
+      return
+    elsif @recipe.nil?
       flash[:notice] = "There is no recipe with these ingredients"
       redirect_to(:root)
       return
     end
+    
+    @ids.push @recipe.id
+    
   end
 end
