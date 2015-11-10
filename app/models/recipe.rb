@@ -8,3 +8,4 @@ class Recipe < ActiveRecord::Base
         Recipe.uniq.pluck(:side_ingredient)
     end
 end
+
