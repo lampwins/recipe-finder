@@ -3,7 +3,7 @@ class RecipesController < ApplicationController
   def index
     @main_ingredients = Recipe.allMainIngredients
     @side_ingredients = Recipe.allSideIngredients
-    @counter = 0
+   
     
   end
   
