@@ -11,6 +11,9 @@ class RecipesController < ApplicationController
     if params[:title] == "" || params[:cook_time] == "" || params[:directions] == "" || params[:main_ingredient] == "" || params[:side_ingredient] == ""
       flash[:notice] = "YOU MUST SPECIFY ALL RECIPE CRITERIA"
       redirect_to :root
+    elsif params[:cook_time] >= 0 || params[:cook_time] < 999 || params[:cook_time] % 1 != 0
+      flash[:notice] = "You must enter cook time in whole minutes"
+      redirect_to :root
     else
       recipe = Recipe.new()
       recipe.title = params[:title]
