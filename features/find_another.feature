@@ -14,12 +14,17 @@ Background: recipes have been added to database
 
 Scenario: search for recipes containing chicken
   
-  When I select "Chicken" from "main_ingredient"
-  And I select "Rice" from "side_ingredient"
-  And I press "Submit"
-  Then I should be on the recipe page
-  And I should see "Chicken and Rice"
-  And I should see "Like this recipe?"
+  When I search for "Chicken" and "Rice"
+  Then I should see the "Chicken and Rice" recipe
   When I press "No Find Another" 
-  Then I should be on the recipe page
-  And I should see "Herb Chicken with Wild Rice"
+  Then I should see the "Herb Chicken with Wild Rice" recipe
+  
+Scenario: no more recipes
+  
+  When I search for "Chicken" and "Rice"
+  Then I should see the "Chicken and Rice" recipe
+  When I press "No Find Another" 
+  Then I should see the "Herb Chicken with Wild Rice" recipe
+  When I press "No Find Another" 
+  Then I should be on the recipe-finder home page
+  And I should see "There are no more recipes for these ingredients"
