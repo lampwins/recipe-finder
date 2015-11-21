@@ -7,7 +7,7 @@ Feature: add a new recipe
 Scenario: add a new recipe containing pork and rice
   
   Given I am on the recipe-finder home page
-  When I follow "Add Recipe" 
+  When I press "Add Recipe" 
   Then I should be on the add new recipe page
   When I fill in "title" with "Pork Fried Rice"
   And I fill in "cook_time" with "30"
@@ -21,7 +21,7 @@ Scenario: add a new recipe containing pork and rice
 Scenario: add a new recipe missing a title
   
   Given I am on the recipe-finder home page
-  When I follow "Add Recipe" 
+  When I press "Add Recipe" 
   Then I should be on the add new recipe page
   When I fill in "cook_time" with "30"
   And I fill in "directions" with "Make your apprentice do it"
@@ -34,7 +34,7 @@ Scenario: add a new recipe missing a title
 Scenario: add a new recipe missing a cook time
   
   Given I am on the recipe-finder home page
-  When I follow "Add Recipe" 
+  When I press "Add Recipe" 
   Then I should be on the add new recipe page
   When I fill in "title" with "Pork Fried Rice"
   And I fill in "directions" with "Make your apprentice do it"
@@ -47,7 +47,7 @@ Scenario: add a new recipe missing a cook time
 Scenario: add a new recipe missing a main_ingredient
   
   Given I am on the recipe-finder home page
-  When I follow "Add Recipe" 
+  When I press "Add Recipe" 
   Then I should be on the add new recipe page
   When I fill in "title" with "Pork Fried Rice"
   And I fill in "cook_time" with "30"
@@ -60,7 +60,7 @@ Scenario: add a new recipe missing a main_ingredient
 Scenario: add a new recipe missing a main_ingredient
   
   Given I am on the recipe-finder home page
-  When I follow "Add Recipe" 
+  When I press "Add Recipe" 
   Then I should be on the add new recipe page
   When I fill in "title" with "Pork Fried Rice"
   And I fill in "cook_time" with "30"
@@ -73,7 +73,7 @@ Scenario: add a new recipe missing a main_ingredient
 Scenario: add a new recipe missing multiple criteria
   
   Given I am on the recipe-finder home page
-  When I follow "Add Recipe" 
+  When I press "Add Recipe" 
   Then I should be on the add new recipe page
   When I fill in "title" with "Pork Fried Rice"
   And I fill in "cook_time" with "30"

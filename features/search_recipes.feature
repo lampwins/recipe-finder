@@ -54,5 +54,5 @@ Scenario: go back to seach again
   When I select "Rice" from "side_ingredient"
   And I press "Submit"
   Then I should be on the recipe page
-  And I follow "Back"
+  And I press "Back"
   Then I should be on the recipe-finder home page
