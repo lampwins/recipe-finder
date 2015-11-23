@@ -43,6 +43,7 @@ group :development, :test do
   
   gem 'rspec-rails'
   gem 'autotest'
+  gem 'paperclip'
 end
 
 group :development do
