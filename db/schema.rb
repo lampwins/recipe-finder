@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151117000251) do
+ActiveRecord::Schema.define(version: 20151124080613) do
 
   create_table "recipes", force: :cascade do |t|
     t.string   "title"
@@ -19,9 +19,13 @@ ActiveRecord::Schema.define(version: 20151117000251) do
     t.text     "directions"
     t.string   "main_ingredient"
     t.string   "side_ingredient"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.integer  "likes"
+    t.string   "recipe_image_file_name"
+    t.string   "recipe_image_content_type"
+    t.integer  "recipe_image_file_size"
+    t.datetime "recipe_image_updated_at"
   end
 
 end

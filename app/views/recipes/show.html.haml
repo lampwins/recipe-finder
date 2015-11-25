@@ -19,7 +19,13 @@
     %tr
         %td
             Directions
-        %td= @recipe.directions
+        %td
+            = @recipe.directions
+    %tr
+        %td
+            Image
+        %td
+            = image_tag @recipe.recipe_image.url
 
 %br
 %br

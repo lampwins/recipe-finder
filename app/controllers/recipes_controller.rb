@@ -3,8 +3,6 @@ class RecipesController < ApplicationController
   def index
     @main_ingredients = Recipe.allMainIngredients
     @side_ingredients = Recipe.allSideIngredients
-   
-    
   end
   
   def create
@@ -21,6 +19,7 @@ class RecipesController < ApplicationController
       recipe.directions = params[:directions]
       recipe.main_ingredient = params[:main_ingredient]
       recipe.side_ingredient = params[:side_ingredient]
+      recipe.recipe_image = params[:recipe_image]
       recipe.save!
       flash[:notice] = "Successfully added " + recipe.title
       redirect_to :root
