@@ -17,6 +17,21 @@ Scenario: add a new recipe containing pork and rice
   And I press "Submit"
   Then I should be on the recipe-finder home page
   And I should see "Successfully added Pork Fried Rice"
+  
+Scenario: add a new recipe containing pork and rice and an image
+  
+  Given I am on the recipe-finder home page
+  When I press "Add Recipe" 
+  Then I should be on the add new recipe page
+  When I fill in "title" with "Pork Fried Rice"
+  And I fill in "cook_time" with "30"
+  And I fill in "directions" with "Make your apprentice do it"
+  And I fill in "main_ingredient" with "Pork"
+  And I fill in "side_ingredient" with "Rice"
+  And I provide an image file for "recipe_image"
+  And I press "Submit"
+  Then I should be on the recipe-finder home page
+  And I should see "Successfully added Pork Fried Rice"
 
 Scenario: add a new recipe missing a title
   

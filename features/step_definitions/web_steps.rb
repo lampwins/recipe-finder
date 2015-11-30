@@ -61,6 +61,10 @@ When /^(?:|I )fill in the following:$/ do |fields|
   end
 end
 
+When /^I provide an image file for "([^\"]*)"$/ do |recipe_image|
+  attach_file recipe_image, Rails.root.join('app', 'images', 'Chicken_BrownRice.jpg') 
+end 
+
 When /^(?:|I )select "([^"]*)" from "([^"]*)"$/ do |value, field|
   select(value, :from => field)
 end
@@ -231,3 +235,4 @@ end
 Then /^show me the page$/ do
   save_and_open_page
 end
+
