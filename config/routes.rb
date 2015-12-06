@@ -17,6 +17,9 @@ Rails.application.routes.draw do
     resources :recipes, only: %w(new create)
     
     get 'recipes/' => 'recipes#show', as: :recipe
+    get 'administrator_login/', to: 'recipes#administrator_login', as: 'administrator_login'
+    get 'administrator/', to: 'recipes#administrator', as: 'administrator'
+    
   # Example resource route with options:
   #   resources :products do
   #     member do

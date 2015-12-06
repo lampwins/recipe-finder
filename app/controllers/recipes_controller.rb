@@ -63,4 +63,12 @@ class RecipesController < ApplicationController
     @ids.push @recipe.id
     
   end
+  
+  def administrator_login
+    
+  end
+  
+  def administrator
+    
+  end
 end
