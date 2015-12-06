@@ -20,6 +20,9 @@
       %td
       %td
         %input{:type => "submit", :value => "Submit"}
-
-= button_to 'Add Recipe', :new_recipe, :method => :get
-= button_to 'Administrator Login', :administrator_login, :method => :get
+%table
+  %tr
+    %td
+      = button_to 'Add Recipe', :new_recipe, :method => :get
+    %td
+      = button_to 'Administrator Login', :administrator_login, :method => :get

@@ -14,18 +14,17 @@ Background: recipes have been added to database
   And  I am on the recipe-finder home page
   When I press "Administrator Login" 
   Then I should be on the administrator login page
+
+Scenario: delete recipe containing chicken and rice
+  
   When I fill in "username" with "MyUserName"
   And I fill in "password" with "password"
   And I press "Login"
   Then I should be on the administrator page
-
-Scenario: delete recipe containing chicken and rice
-
   When I follow "Chicken and Rice"
   Then I should see "Chicken and Rice has been deleted"
   When I press "Exit" 
+  
+Scenario: cancel administrator login
+  When I press "Back"
   Then I should be on the recipe-finder home page
-  When I select "Chicken" from "main_ingredient"
-  And I select "Rice" from "side_ingredient"
-  And I press "Submit"
-  Then I should be on the recipe page

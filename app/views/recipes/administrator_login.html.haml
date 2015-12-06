@@ -1,4 +1,4 @@
--#  This file is app/views/recipes/index.html.haml
+-#  This file is app/views/recipes/administrator_login.html.haml
 %h1 Administrator Login
 =form_tag administrator_path, :method => :get do
   %table#admin_login_form{:style=>"width: 480px"}
@@ -11,8 +11,13 @@
       %td
         Password
       %td
-        %input#title{:name => "password", :type => "text"}
+        %input#title{:name => "password", :type => "password"}
     %tr
       %td
       %td
         %input{:type => "submit", :value => "Login"}
+%table
+  %tr
+    %td
+      =form_tag :root, :method => :get do
+        %input{:type=>"submit", :value => "Back"}
