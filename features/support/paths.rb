@@ -16,6 +16,8 @@ module NavigationHelpers
     when /^the (recipe-finder )?home\s?page$/ then '/'
     when /^the recipe-finder page$/ then '/'
     when /^the add new recipe page$/ then '/recipes/new'
+    when /^the administrator login page$/ then '/administrator_login'
+    when /^the administrator page$/ then '/administrator'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
