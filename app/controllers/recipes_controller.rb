@@ -30,6 +30,12 @@ class RecipesController < ApplicationController
     
   end
   
+  def destroy
+    @recipe = Recipe.find(params[:id])
+    @recipe.destroy
+    flash[:notice] = "'#{@recipe.title}' has been deleted"
+    redirect_to administrator_path
+  end
 
   def show
     if params[:main_ingredient] == "select" || params[:side_ingredient] == "select"
@@ -69,6 +75,6 @@ class RecipesController < ApplicationController
   end
   
   def administrator
-    
+    @recipes = Recipe.all.each
   end
 end

@@ -17,8 +17,10 @@ Rails.application.routes.draw do
     resources :recipes, only: %w(new create)
     
     get 'recipes/' => 'recipes#show', as: :recipe
+    delete 'recipes/:id', to: 'recipes#destroy'
     get 'administrator_login/', to: 'recipes#administrator_login', as: 'administrator_login'
     get 'administrator/', to: 'recipes#administrator', as: 'administrator'
+    delete 'administrator/:id', to: 'recipes#destroy'
     
   # Example resource route with options:
   #   resources :products do
