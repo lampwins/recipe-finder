@@ -4,6 +4,7 @@
 %table#recipes
   %thead
     %tr
+      %th Action
       %th Title
       %th Cook Time
       %th Directions
@@ -19,7 +20,8 @@
   %tbody
     - @recipes.each do |recipe|
       %tr
-        %td= link_to "#{recipe.title}", delete_recipe_path(recipe.id), :method=>'delete'
+        %td= button_to 'Delete', delete_recipe_path(recipe.id), :method => :delete, :confirm => 'Are you sure?'
+        %td= recipe.title
         %td= recipe.cook_time
         %td= recipe.directions
         %td= recipe.main_ingredient

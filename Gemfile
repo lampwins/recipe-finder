@@ -45,6 +45,8 @@ group :development, :test do
   
   gem 'rspec-rails'
   gem 'autotest'
+  
+  gem 'simplecov', :require => false
 end
 
 group :development do

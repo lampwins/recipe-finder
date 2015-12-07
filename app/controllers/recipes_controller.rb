@@ -33,7 +33,7 @@ class RecipesController < ApplicationController
   def destroy
     @recipe = Recipe.find(params[:id])
     @recipe.destroy
-    flash[:notice] = "'#{@recipe.title}' has been deleted"
+    flash[:notice] = "#{@recipe.title} has been deleted"
     redirect_to administrator_path
   end
 
