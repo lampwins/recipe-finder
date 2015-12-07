@@ -19,7 +19,7 @@
   %tbody
     - @recipes.each do |recipe|
       %tr
-        %td= link_to "#{recipe.title}", administrator_path(recipe), :method => :delete
+        %td= link_to "#{recipe.title}", delete_recipe_path(recipe.id), :method=>'delete'
         %td= recipe.cook_time
         %td= recipe.directions
         %td= recipe.main_ingredient
