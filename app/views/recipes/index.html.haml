@@ -1,7 +1,7 @@
 -#  This file is app/views/recipes/index.html.haml
 %h1 Search Recipes
 =form_tag recipe_path, :method => :get do
-  %table#ingredients_form
+  %table#ingredients_form{:style=>"width: 480px"}
     %tr
       %td
         Main Ingredient
@@ -20,5 +20,9 @@
       %td
       %td
         %input{:type => "submit", :value => "Submit"}
-
-= button_to 'Add Recipe', :new_recipe, :method => :get
+%table
+  %tr
+    %td
+      = button_to 'Add Recipe', :new_recipe, :method => :get
+    %td
+      = button_to 'Administrator Login', :administrator_login, :method => :get

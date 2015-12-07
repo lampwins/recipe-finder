@@ -1,0 +1,40 @@
+-#  This file is app/views/recipes/administrator.html.haml
+%h1 Administrator Portal
+%h2 Delete a Recipe
+%table#recipes
+  %thead
+    %tr
+      %th Action
+      %th Title
+      %th Cook Time
+      %th Directions
+      %th Main Ingredient
+      %th Side Ingredient
+      %th Created
+      %th Last Updated
+      %th Likes
+      %th Image Name
+      %th Image Type
+      %th Image Size
+      %th Image Last Updated
+  %tbody
+    - @recipes.each do |recipe|
+      %tr
+        %td= button_to 'Delete', delete_recipe_path(recipe.id), :method => :delete, :confirm => 'Are you sure?'
+        %td= recipe.title
+        %td= recipe.cook_time
+        %td= recipe.directions
+        %td= recipe.main_ingredient
+        %td= recipe.side_ingredient
+        %td= recipe.created_at
+        %td= recipe.updated_at
+        %td= recipe.likes
+        %td= recipe.recipe_image_file_name
+        %td= recipe.recipe_image_content_type
+        %td= recipe.recipe_image_file_size
+        %td= recipe.recipe_image_updated_at
+%table
+  %tr
+    %td
+      =form_tag :root, :method => :get do
+        %input{:type=>"submit", :value => "Exit"}
