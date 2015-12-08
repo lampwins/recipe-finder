@@ -23,7 +23,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 #For Adding Images
 gem 'paperclip'
-gem 'rmagick'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -67,5 +66,6 @@ group :production do
   # make sure the following gems are in your production group:
   gem 'pg'              # use PostgreSQL in production (Heroku)
   gem 'rails_12factor'  # Heroku-specific production settings
+  gem 'rmagick'
 end
 
