@@ -1,191 +1,12 @@
 {
-  "RSpec": {
-    "coverage": {
-      "/home/ubuntu/workspace/recipe-finder/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
-      "/home/ubuntu/workspace/recipe-finder/app/helpers/recipes_helper.rb": [
-        1,
-        null
-      ],
-      "/home/ubuntu/workspace/recipe-finder/app/controllers/recipes_controller.rb": [
-        1,
-        null,
-        1,
-        0,
-        0,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-<<<<<<< HEAD
-        null,
-        1,
-        5,
-=======
-        1,
-        1,
->>>>>>> 12af071c37ea440bd829ce3af88e5752fac0c37f
-        1,
-        1,
-        1,
-        null,
-        null,
-<<<<<<< HEAD
-        null,
-        4,
-        2,
-        2,
-        null,
-        null,
-        2,
-        2,
-        null,
-        4,
-        4,
-        4,
-=======
-        1,
-        11,
-        3,
-        3,
-        3,
-        null,
-        null,
-        null,
-        8,
-        3,
-        3,
-        null,
-        null,
-        5,
-        5,
-        null,
-        8,
-        8,
-        8,
->>>>>>> 12af071c37ea440bd829ce3af88e5752fac0c37f
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-<<<<<<< HEAD
-        2,
-        null,
-        null,
-=======
-        6,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        1,
-        2,
-        null,
->>>>>>> 12af071c37ea440bd829ce3af88e5752fac0c37f
-        null
-      ],
-      "/home/ubuntu/workspace/recipe-finder/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
-        1,
-        null
-      ],
-<<<<<<< HEAD
-=======
-      "/home/ubuntu/workspace/recipe-finder/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
-      "/home/ubuntu/workspace/recipe-finder/app/helpers/recipes_helper.rb": [
-        1,
-        null
-      ],
->>>>>>> 12af071c37ea440bd829ce3af88e5752fac0c37f
-      "/home/ubuntu/workspace/recipe-finder/app/models/recipe.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-<<<<<<< HEAD
-        0,
-        null,
-        null,
-        1,
-        0,
-=======
-        31,
-        null,
-        null,
-        1,
-        31,
->>>>>>> 12af071c37ea440bd829ce3af88e5752fac0c37f
-        null,
-        null,
-        null
-      ]
-    },
-<<<<<<< HEAD
-    "timestamp": 1449287770
-  },
   "Cucumber Features": {
     "coverage": {
-=======
-    "timestamp": 1449529967
-  },
-  "RSpec": {
-    "coverage": {
-      "/home/ubuntu/workspace/recipe-finder/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
-      "/home/ubuntu/workspace/recipe-finder/app/helpers/recipes_helper.rb": [
-        1,
-        null
-      ],
->>>>>>> 12af071c37ea440bd829ce3af88e5752fac0c37f
       "/home/ubuntu/workspace/recipe-finder/app/controllers/recipes_controller.rb": [
         1,
         null,
         1,
-<<<<<<< HEAD
-        28,
-        28,
+        27,
+        27,
         null,
         null,
         1,
@@ -206,30 +27,6 @@
         2,
         2,
         2,
-=======
-        0,
-        0,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
->>>>>>> 12af071c37ea440bd829ce3af88e5752fac0c37f
         null,
         null,
         null,
@@ -237,7 +34,12 @@
         null,
         null,
         null,
-<<<<<<< HEAD
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         null,
         1,
         11,
@@ -258,34 +60,6 @@
         8,
         8,
         8,
-=======
-        1,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        1,
-        5,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        4,
-        2,
-        2,
-        null,
-        null,
-        2,
-        2,
-        null,
-        4,
-        4,
-        4,
->>>>>>> 12af071c37ea440bd829ce3af88e5752fac0c37f
         1,
         1,
         1,
@@ -296,9 +70,16 @@
         1,
         null,
         null,
-<<<<<<< HEAD
         6,
         null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        2,
         null,
         null
       ],
@@ -314,25 +95,6 @@
         null
       ],
       "/home/ubuntu/workspace/recipe-finder/app/helpers/recipes_helper.rb": [
-=======
-        2,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null
-      ],
-      "/home/ubuntu/workspace/recipe-finder/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
->>>>>>> 12af071c37ea440bd829ce3af88e5752fac0c37f
         1,
         null
       ],
@@ -342,28 +104,16 @@
         1,
         1,
         1,
-<<<<<<< HEAD
-        28,
+        27,
         null,
         null,
         1,
-        28,
-=======
-        0,
-        null,
-        null,
-        1,
-        0,
->>>>>>> 12af071c37ea440bd829ce3af88e5752fac0c37f
+        27,
         null,
         null,
         null
       ]
     },
-<<<<<<< HEAD
-    "timestamp": 1449530292
-=======
-    "timestamp": 1449529933
->>>>>>> 12af071c37ea440bd829ce3af88e5752fac0c37f
+    "timestamp": 1449533927
   }
 }

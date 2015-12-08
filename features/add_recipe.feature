@@ -43,7 +43,7 @@ Scenario: add a new recipe missing a title
   And I fill in "main_ingredient" with "Pork"
   And I fill in "side_ingredient" with "Rice"
   And I press "Submit"
-  Then I should be on the recipe-finder home page
+  Then I should be on the add new recipe page
   And I should see "YOU MUST SPECIFY ALL RECIPE CRITERIA"
   
 Scenario: add a new recipe missing a cook time
@@ -56,10 +56,10 @@ Scenario: add a new recipe missing a cook time
   And I fill in "main_ingredient" with "Pork"
   And I fill in "side_ingredient" with "Rice"
   And I press "Submit"
-  Then I should be on the recipe-finder home page
+  Then I should be on the add new recipe page
   And I should see "YOU MUST SPECIFY ALL RECIPE CRITERIA"
   
-Scenario: add a new recipe missing a main_ingredient
+Scenario: add a new recipe missing a side_ingredient
   
   Given I am on the recipe-finder home page
   When I press "Add Recipe" 
@@ -69,7 +69,7 @@ Scenario: add a new recipe missing a main_ingredient
   And I fill in "directions" with "Make your apprentice do it"
   And I fill in "side_ingredient" with "Rice"
   And I press "Submit"
-  Then I should be on the recipe-finder home page
+  Then I should be on the add new recipe page
   And I should see "YOU MUST SPECIFY ALL RECIPE CRITERIA"
   
 Scenario: add a new recipe missing a main_ingredient
@@ -82,7 +82,7 @@ Scenario: add a new recipe missing a main_ingredient
   And I fill in "directions" with "Make your apprentice do it"
   And I fill in "main_ingredient" with "Pork"
   And I press "Submit"
-  Then I should be on the recipe-finder home page
+  Then I should be on the add new recipe page
   And I should see "YOU MUST SPECIFY ALL RECIPE CRITERIA"
 
 Scenario: add a new recipe missing multiple criteria
@@ -94,5 +94,5 @@ Scenario: add a new recipe missing multiple criteria
   And I fill in "cook_time" with "30"
   And I fill in "main_ingredient" with "Pork"
   And I press "Submit"
-  Then I should be on the recipe-finder home page
+  Then I should be on the add new recipe page
   And I should see "YOU MUST SPECIFY ALL RECIPE CRITERIA"
