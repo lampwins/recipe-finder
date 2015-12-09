@@ -5,8 +5,8 @@
         1,
         null,
         1,
-        27,
-        27,
+        32,
+        32,
         null,
         null,
         1,
@@ -81,6 +81,19 @@
         1,
         2,
         null,
+        null,
+        1,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
         null
       ],
       "/home/ubuntu/workspace/recipe-finder/app/controllers/application_controller.rb": [
@@ -104,17 +117,17 @@
         1,
         1,
         1,
-        27,
+        32,
         null,
         null,
         1,
-        27,
+        32,
         null,
         null,
         null
       ]
     },
-    "timestamp": 1449625913
+    "timestamp": 1449645801
   },
   "RSpec": {
     "coverage": {
@@ -206,6 +219,19 @@
         1,
         0,
         null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/home/ubuntu/workspace/recipe-finder/app/controllers/application_controller.rb": [
@@ -231,6 +257,6 @@
         null
       ]
     },
-    "timestamp": 1449626168
+    "timestamp": 1449645359
   }
 }

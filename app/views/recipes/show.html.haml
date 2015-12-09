@@ -35,8 +35,11 @@
             Like this recipe?
     %tr
         %td
-            -# Dummy button to be replaced
-            %input{:type=>"button", :value => "Yes"}
+            =form_tag like_path(@recipe.id), :method => :get do
+                %input{:type=>"hidden", :value=>params[:main_ingredient], :name=>"main_ingredient"}
+                %input{:type=>"hidden", :value=>params[:side_ingredient], :name=>"side_ingredient"}
+                %input{:type=>"hidden", :value=>"#{@ids.join(",")}", :name=>"ids"}
+                %input{:type=>"submit", :value=>"Yes"}
         %td
             =form_tag recipe_path, :method => :get do
                 %input{:type=>"hidden", :value=>params[:main_ingredient], :name=>"main_ingredient"}

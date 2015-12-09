@@ -21,7 +21,7 @@ Scenario: delete recipe containing chicken and rice
   And I press "Login"
   Then I should be on the administrator page
   When I press "Delete"
-  Then I should see "Chicken and Rice has been deleted"
+  Then I should see "'Chicken and Rice' has been deleted"
   When I press "Exit" 
   Then I should be on the recipe-finder home page
   

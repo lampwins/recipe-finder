@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     get 'administrator_login/', to: 'recipes#administrator_login', as: 'administrator_login'
     get 'administrator/', to: 'recipes#administrator', as: 'administrator'
     delete 'recipes/:id' => 'recipes#destroy', as: 'delete_recipe'
+    get 'recipe/like/:id' => 'recipes#like', as: :like
     
   # Example resource route with options:
   #   resources :products do

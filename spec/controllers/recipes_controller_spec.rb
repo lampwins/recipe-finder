@@ -66,7 +66,19 @@ RSpec.describe RecipesController, type: :controller do
     end
     it "deletes a recipe" do 
       delete :destroy, :id => 1
-      expect(controller.flash[:notice]).to eq("Test has been deleted")
+      expect(controller.flash[:notice]).to eq("'Test' has been deleted")
+    end
+  end
+  
+  describe "#like" do
+    before(:each) do
+      Recipe.delete_all
+      @recipe = Recipe.create! :main_ingredient => "Chicken", :side_ingredient => "Rice", :directions => "cook it", :cook_time => 30, :title => "Test", :id => 1
+      @recipe = Recipe.create! :main_ingredient => "Chicken", :side_ingredient => "Rice", :directions => "cook it", :cook_time => 15, :title => "Test2", :id => 2
+    end
+    it 'accepts like button' do
+      get :like, :id => 1, :ids => 1, :main_ingredient => 'Chicken', :side_ingredient => 'Rice'
+      expect(flash[:notice]).to match(/Thanks: (?:\d*)?\d+ total likes/)
     end
   end
 end
