@@ -66,7 +66,7 @@ RSpec.describe RecipesController, type: :controller do
     end
     it "deletes a recipe" do 
       delete :destroy, :id => 1
-      expect(controller.flash[:notice]).to eq("'Test' has been deleted")
+      expect(controller.flash[:notice]).to eq("Test has been deleted")
     end
   end
   

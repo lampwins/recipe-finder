@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-12-09T07:23:21+00:00">2015-12-09T07:23:21+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-12-09T07:36:48+00:00">2015-12-09T07:36:48+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         4.88
+         4.56
        </span>
     </span> hits/line)
   </h2>
@@ -67,7 +67,7 @@
         <td>60</td>
         <td>58</td>
         <td>2</td>
-        <td>4.4</td>
+        <td>4.2</td>
       </tr>
       
       <tr>
@@ -97,7 +97,7 @@
         <td>7</td>
         <td>7</td>
         <td>0</td>
-        <td>10.6</td>
+        <td>9.1</td>
       </tr>
       
     </tbody>
@@ -113,7 +113,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         4.32
+         4.13
        </span>
     </span> hits/line)
   </h2>
@@ -155,7 +155,7 @@
         <td>60</td>
         <td>58</td>
         <td>2</td>
-        <td>4.4</td>
+        <td>4.2</td>
       </tr>
       
     </tbody>
@@ -170,7 +170,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         10.6
+         9.1
        </span>
     </span> hits/line)
   </h2>
@@ -202,7 +202,7 @@
         <td>7</td>
         <td>7</td>
         <td>0</td>
-        <td>10.6</td>
+        <td>9.1</td>
       </tr>
       
     </tbody>
@@ -431,14 +431,14 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="32" data-linenumber="4">
-          <span class="hits">32</span>
+        <li class="covered" data-hits="27" data-linenumber="4">
+          <span class="hits">27</span>
           
           <code class="ruby">    @main_ingredients = Recipe.allMainIngredients</code>
         </li>
       
-        <li class="covered" data-hits="32" data-linenumber="5">
-          <span class="hits">32</span>
+        <li class="covered" data-hits="27" data-linenumber="5">
+          <span class="hits">27</span>
           
           <code class="ruby">    @side_ingredients = Recipe.allSideIngredients</code>
         </li>
@@ -476,7 +476,7 @@
         <li class="covered" data-hits="6" data-linenumber="11">
           <span class="hits">6</span>
           
-          <code class="ruby">      redirect_to :root</code>
+          <code class="ruby">      redirect_to :new_recipe</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="12">
@@ -494,7 +494,7 @@
         <li class="missed" data-hits="0" data-linenumber="14">
           
           
-          <code class="ruby">      redirect_to :root</code>
+          <code class="ruby">      redirect_to :new_recipe</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
@@ -626,7 +626,7 @@
         <li class="covered" data-hits="2" data-linenumber="36">
           <span class="hits">2</span>
           
-          <code class="ruby">    flash[:notice] = &quot;&#39;#{@recipe.title}&#39; has been deleted&quot;</code>
+          <code class="ruby">    flash[:notice] = &quot;#{@recipe.title} has been deleted&quot;</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="37">
@@ -1079,8 +1079,8 @@
           <code class="ruby">    def self.allMainIngredients</code>
         </li>
       
-        <li class="covered" data-hits="32" data-linenumber="6">
-          <span class="hits">32</span>
+        <li class="covered" data-hits="27" data-linenumber="6">
+          <span class="hits">27</span>
           
           <code class="ruby">        Recipe.uniq.pluck(:main_ingredient)</code>
         </li>
@@ -1103,8 +1103,8 @@
           <code class="ruby">    def self.allSideIngredients</code>
         </li>
       
-        <li class="covered" data-hits="32" data-linenumber="10">
-          <span class="hits">32</span>
+        <li class="covered" data-hits="27" data-linenumber="10">
+          <span class="hits">27</span>
           
           <code class="ruby">        Recipe.uniq.pluck(:side_ingredient)</code>
         </li>

@@ -8,10 +8,10 @@ class RecipesController < ApplicationController
   def create
     if params[:title] == "" || params[:cook_time] == "" || params[:directions] == "" || params[:main_ingredient] == "" || params[:side_ingredient] == ""
       flash[:notice] = "YOU MUST SPECIFY ALL RECIPE CRITERIA"
-      redirect_to :root
+      redirect_to :new_recipe
     elsif params[:cook_time].to_i <= 0 || params[:cook_time].to_i > 999 || params[:cook_time].to_i % 1 != 0
       flash[:notice] = "You must enter cook time in whole minutes"
-      redirect_to :root
+      redirect_to :new_recipe
     else
       recipe = Recipe.new()
       recipe.title = params[:title]
@@ -33,7 +33,7 @@ class RecipesController < ApplicationController
   def destroy
     @recipe = Recipe.find(params[:id])
     @recipe.destroy
-    flash[:notice] = "'#{@recipe.title}' has been deleted"
+    flash[:notice] = "#{@recipe.title} has been deleted"
     redirect_to administrator_path
   end
 
