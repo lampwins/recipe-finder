@@ -57,4 +57,16 @@ RSpec.describe RecipesController, type: :controller do
     #   expect(controller.flash[:notice]).to eq("Successfully added test")
     # end
   end
+  
+  describe "#destroy" do
+    before(:each) do
+      Recipe.delete_all
+      @recipe = Recipe.create! :main_ingredient => "Chicken", :side_ingredient => "Rice", :directions => "cook it", :cook_time => 30, :title => "Test", :id => 1
+      @recipe = Recipe.create! :main_ingredient => "Chicken", :side_ingredient => "Rice", :directions => "cook it", :cook_time => 15, :title => "Test2", :id => 2
+    end
+    it "deletes a recipe" do 
+      delete :destroy, :id => 1
+      expect(controller.flash[:notice]).to eq("Test has been deleted")
+    end
+  end
 end
